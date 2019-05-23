@@ -1,5 +1,6 @@
-This script is used for findig if apps installed on a local host product has any Data-center version available in atlassian market place (https://marketplace.atlassian.com/). 
-This is suposed to be run from the localhost where the host product is installed. 
+
+This utility is used for finding if apps installed on a local host product has any Data-center version available on Atlassian Marketplace (https://marketplace.atlassian.com/)
+This python script is supposed to be run from the localhost where the host product is installed. In order to be able to use this utility make sure you have Python installed on your machine.
 
 ---------------------------------------------------------------------------
 USAGE
@@ -24,7 +25,7 @@ port : 3990
 ----------------------------------------------------------------------------
 How to run ? 
 ----------------------------------------------------------------------------
-1) clone this repo 
+1) clone this repo https://github.com/atlasadwivedi/find-dc-apps.git
 2) change to  findDCApps directory ( cd findDCApps)
 3) run findDCapps.py as below 
 
