@@ -1,0 +1,206 @@
+This script is used for findig if apps installed on a local host product has any Data-center version available in atlassian market place (https://marketplace.atlassian.com/). 
+This is suposed to be run from the localhost where the host product is installed. 
+
+---------------------------------------------------------------------------
+USAGE
+----------------------------------------------------------------------------
+python findDCApps.py -h
+usage: findDCApps.py [-h] [--user USER] [--password PASSWORD] [--port PORT]
+
+optional arguments:
+  -h, --help                  show this help message and exit
+  --user USER, -u USER        Admin user name
+  --password PASSWORD, -p     PASSWORD Admin password
+  --port PORT, -port PORT     Host product port
+  
+----------------------------------------------------------------------------
+Defaults
+----------------------------------------------------------------------------
+user : admin 
+password : admin 
+port : 3990
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+How to run ? 
+----------------------------------------------------------------------------
+1) clone this repo 
+2) change to  findDCApps directory ( cd findDCApps)
+3) run findDCapps.py as below 
+
+> python findDCapps.py  ---> this will take all default values 
+OR
+> python findDCApps.py  -u admin -p admin -port 3990 ---> this will take values from command line argument.
+
+** make sure you have Python 2.7.10 installed on your mahcine
+
+----------------------------------------------------------------------------
+Sample output
+----------------------------------------------------------------------------
+
+adwivedi [findDCApps] (master)$ pwd
+/Users/adwivedi/Desktop/find-dc-apps/findDCApps
+
+adwivedi [/Users/adwivedi/Desktop/find-dc-apps/findDCApps] (master)$ python --version
+Python 2.7.10 
+
+adwivedi [/Users/adwivedi/Desktop/find-dc-apps/findDCApps] (master)$ python findDCApps.py  -u admin -p admin -port 3990
+--------------------------------------------------------------------------------
+Apps installed on this instance...
+--------------------------------------------------------------------------------
+App Name : Apache Commons FileUpload Bundle
+App Key  : org.apache.commons.fileupload-1.2.1
+
+App Name : Atlassian Jira - Plugins - Development Integration Plugin
+App Key  : com.atlassian.jira.plugins.jira-development-integration-plugin
+
+App Name : Atlassian Jira - Plugins - Transition Trigger Plugin
+App Key  : com.atlassian.jira.plugins.jira-transition-triggers-plugin
+
+App Name : atlassian-whisper-backdoor-plugin
+App Key  : com.atlassian.whisper.atlassian-whisper-backdoor-plugin
+
+App Name : Automation for Jira
+App Key  : com.codebarrel.addons.automation
+
+App Name : FishEye Plugin
+App Key  : com.atlassian.jirafisheyeplugin
+
+App Name : JIRA Agile
+App Key  : com.pyxis.greenhopper.jira
+
+App Name : Jira Bamboo Plugin
+App Key  : com.atlassian.jira.plugin.ext.bamboo
+
+App Name : Jira DVCS Connector Plugin
+App Key  : com.atlassian.jira.plugins.jira-bitbucket-connector-plugin
+
+App Name : Jira for Software Plugin
+App Key  : com.atlassian.jira.plugins.jira-software-plugin
+
+App Name : Jira Software Application
+App Key  : com.atlassian.jira.jira-software-application
+
+App Name : JIRA Software Monitor Plugin
+App Key  : com.atlassian.jira.plugins.jira-software-monitor-plugin
+
+App Name : License Checker Test Plugin
+App Key  : com.atlassian.upm.license-checker-test-plugin
+
+App Name : Test Plugin v1 (classpath)
+App Key  : test-plugin-v1-classpath
+
+App Name : Test Plugin v1 (installable)
+App Key  : test-plugin-v1-installable
+
+App Name : Test Plugin v2 (updatable, requires restart, v1.0)
+App Key  : test-plugin-v2-updatable-requires-restart
+
+App Name : Xray
+App Key  : com.xpandit.plugins.xray
+
+--------------------------------------------------------------------------------
+Total number of User installed apps = 17
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Querying Atlassian marketplace for availability of DC versions of the 17 apps...
+--------------------------------------------------------------------------------
+https://marketplace.atlassian.com/rest/2/addons/org.apache.commons.fileupload-1.2.1/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugins.jira-development-integration-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugins.jira-transition-triggers-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.whisper.atlassian-whisper-backdoor-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.codebarrel.addons.automation/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jirafisheyeplugin/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.pyxis.greenhopper.jira/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugin.ext.bamboo/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugins.jira-bitbucket-connector-plugin/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugins.jira-software-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.jira-software-application/versions
+Apps is available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.jira.plugins.jira-software-monitor-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.atlassian.upm.license-checker-test-plugin/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/test-plugin-v1-classpath/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/test-plugin-v1-installable/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/test-plugin-v2-updatable-requires-restart/versions
+Apps not available on marketplace
+
+
+https://marketplace.atlassian.com/rest/2/addons/com.xpandit.plugins.xray/versions
+Apps is available on marketplace
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Apps which doesn't have DC version available...
+--------------------------------------------------------------------------------
+App Name : FishEye Plugin
+App Key  : com.atlassian.jirafisheyeplugin
+
+App Name : JIRA Agile
+App Key  : com.pyxis.greenhopper.jira
+
+App Name : Jira Bamboo Plugin
+App Key  : com.atlassian.jira.plugin.ext.bamboo
+
+App Name : Jira DVCS Connector Plugin
+App Key  : com.atlassian.jira.plugins.jira-bitbucket-connector-plugin
+
+App Name : Jira Software Application
+App Key  : com.atlassian.jira.jira-software-application
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Apps which have DC version available...
+--------------------------------------------------------------------------------
+App Name : Automation for Jira
+App Key  : com.codebarrel.addons.automation
+
+App Name : Xray
+App Key  : com.xpandit.plugins.xray
+
+--------------------------------------------------------------------------------
+
