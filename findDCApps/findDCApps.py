@@ -60,7 +60,7 @@ print "-"*nDash
 
 #for every plugin query atlassian marketplace /versions API for available deployment options
 
-url = "https://marketplace.atlassian.com/rest/2/addons/{}/versions"
+url = "https://marketplace.atlassian.com/rest/2/addons/{}/versions?limit=50&includePrivate=false"
 dcVersionAvailable = []
 dcVersionNotAvailable = []
 print "-"*nDash
