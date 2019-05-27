@@ -6,7 +6,7 @@ This python script is supposed to be run from the localhost where the host produ
 USAGE
 ----------------------------------------------------------------------------
 python findDCApps.py -h
-usage: findDCApps.py [-h] [--user USER] [--password PASSWORD] [--port PORT]
+usage: findDCApps.py [-h] [--user USER] [--password PASSWORD] [--host HOST] [--port PORT]
 
 optional arguments:
   -h, --help                  show this help message and exit
