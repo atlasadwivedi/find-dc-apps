@@ -12,6 +12,7 @@ optional arguments:
   -h, --help                  show this help message and exit
   --user USER, -u USER        Admin user name
   --password PASSWORD, -p     PASSWORD Admin password
+  --host HOST, -host HOST     Host
   --port PORT, -port PORT     Host product port
   
 ----------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Defaults
 ----------------------------------------------------------------------------
 user : admin 
 password : admin 
+host : localhost
 port : 3990
 ----------------------------------------------------------------------------
 
@@ -31,7 +33,7 @@ How to run ?
 
 > python findDCapps.py  ---> this will take all default values 
 OR
-> python findDCApps.py  -u admin -p admin -port 3990 ---> this will take values from command line argument.
+> python findDCApps.py  -u admin -p admin -host 192.168.1.6 -port 3990 ---> this will take values from command line argument.
 
 ** make sure you have Python 2.7.10 installed on your mahcine
 
