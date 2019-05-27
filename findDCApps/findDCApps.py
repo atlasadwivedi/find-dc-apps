@@ -33,8 +33,6 @@ if args.port:
 	port = args.port
 
 url = url.format(host,port)
-print "url == "+ url
-
 #query local host product for installed apps
 
 try:
@@ -45,7 +43,6 @@ except Exception as e:
 	exit()
 if response.status_code == 200:
 	installedApps = json.loads(response.content)
-	print "loads"
 else:
 	print "ERROR : Unable to connect to host ptoduct... exiting... please check command line paremeters"
 	exit()
@@ -70,7 +67,7 @@ print "-"*nDash
 
 #for every plugin query atlassian marketplace /versions API for available deployment options
 
-url = "https://marketplace.atlassian.com/rest/2/addons/{}/versions?limit=50&includePrivate=false"
+url = "https://marketplace.atlassian.com/rest/2/addons/{}/versions?limit=20&includePrivate=false"
 dcVersionAvailable = []
 dcVersionNotAvailable = []
 print "-"*nDash
