@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--user", "-u", help="Admin user name")
 parser.add_argument("--password", "-p", help="Admin password")
 parser.add_argument("--host", "-host", help="Host")
-parser.add_argument("--port", "-port", help="Host product port")
+parser.add_argument("--port", "-port", help="Port")
 args = parser.parse_args()
 nDash = 80
 #localhost url for the rest API for fetching installed plugins
