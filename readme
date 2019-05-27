@@ -27,7 +27,7 @@ port : 3990
 ----------------------------------------------------------------------------
 How to run ? 
 ----------------------------------------------------------------------------
-1) clone this repo https://github.com/atlasadwivedi/find-dc-apps.git
+1) clone or download this repo https://github.com/atlasadwivedi/find-dc-apps.git
 2) change to  findDCApps directory ( cd findDCApps)
 3) run findDCapps.py as below 
 
