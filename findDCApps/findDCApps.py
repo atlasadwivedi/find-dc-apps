@@ -11,23 +11,29 @@ parser = argparse.ArgumentParser()
 # add long and short argument
 parser.add_argument("--user", "-u", help="Admin user name")
 parser.add_argument("--password", "-p", help="Admin password")
+parser.add_argument("--host", "-host", help="Host")
 parser.add_argument("--port", "-port", help="Host product port")
 args = parser.parse_args()
 nDash = 80
 #localhost url for the rest API for fetching installed plugins
-url = "http://localhost:{}/upm/rest/plugins/1.0/"
+url = "http://{}:{}/upm/rest/plugins/1.0/"
 user = "admin"
 password = "admin"
+host = "localhost"
 port = 3990
+
 
 if args.user:  
     user = args.user
 if args.password:
 	password = args.password
+if args.host:
+	host = args.host
 if args.port:
 	port = args.port
 
-url = url.format(port)
+url = url.format(host,port)
+print "url == "+ url
 
 #query local host product for installed apps
 
@@ -37,8 +43,12 @@ except Exception as e:
 	print e 
 	print "ERROR : Unable to connect to host ptoduct... exiting... please check command line paremeters"
 	exit()
-
-installedApps = json.loads(response.content)
+if response.status_code == 200:
+	installedApps = json.loads(response.content)
+	print "loads"
+else:
+	print "ERROR : Unable to connect to host ptoduct... exiting... please check command line paremeters"
+	exit()
 
 plugins = []
 count = 0
