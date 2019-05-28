@@ -1,7 +1,7 @@
 
 This utility is used for finding if apps installed on a local host product has any Data-center version available on Atlassian Marketplace (https://marketplace.atlassian.com/)
-This python script is supposed to be run from the localhost where the host product is installed. In order to be able to use this utility make sure you have Python installed on your machine.
-
+This python script is supposed to be run from the localhost where the host product is installed. In order to be able to use this utility make sure you have Python 2.7.x installed on your machine.
+if any library is missing install it using pip install.
 ---------------------------------------------------------------------------
 USAGE
 ----------------------------------------------------------------------------
